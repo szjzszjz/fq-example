@@ -1,0 +1,72 @@
+#===================== SPRING =======================
+spring:
+  profiles:
+    active: dev
+
+  http:
+    converters:
+      preferred-json-mapper: jackson
+    encoding:
+      enabled: true
+      charset: UTF-8
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 40MB
+
+
+  jpa:
+    generate-ddl: false
+    hibernate.ddl-auto: none
+    show-sql: true
+
+  mvc:
+    static-path-pattern: /**
+
+  aop:
+    auto: true
+    proxy-target-class: true
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: true
+
+
+#===================== SPRING =======================
+
+
+#=================================== SERVER ==========================
+server:
+  port: 9999
+  compression:
+    enabled: false
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript
+    min-response-size: 2048
+  connection-timeout: 5000
+  max-http-header-size: 0
+  error:
+    include-exception: false
+    include-stacktrace: never
+    path: /error
+    whitelabel.enabled: true
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    application-display-name: application
+#=================================== SERVER ==========================
+
+#=================================== LOGGING==========================
+logging:
+  level:
+    root: INFO
+    com:
+      benma: DEBUG
+#=================================== LOGGING==========================
+
+
+
+
+
+
+

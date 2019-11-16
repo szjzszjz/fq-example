@@ -1,0 +1,71 @@
+#============================ SERVER ============================
+server:
+  port: 8888
+  servlet:
+    session:
+      cookie:
+        secure: false
+
+#------------------- tomcat -----------------
+  tomcat:
+    accept-count: 5
+    max-connections: 50
+    max-threads: 6
+    uri-encoding: UTF-8
+    accesslog:
+      enabled: false
+#============================ SERVER ===========================
+
+#============================== SPRING =================================
+spring:
+  jpa:
+    show-sql: true
+
+  #----------------datasource--------------
+  #&serverTimezone=Hongkong 在向数据库中插入java.sql.date数据时需要添加
+  datasource:
+    username: root
+    password: "root"
+    url: jdbc:mysql://localhost:3306/fq?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=Hongkong
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    tomcat:
+      max-active: 2
+      max-idle: 2
+      max-wait: 4000
+      min-idle: 0
+      min-evictable-idle-time-millis: 50
+    hikari:
+      maximum-pool-size: 2
+      max-lifetime: 2000
+      minimum-idle: 0
+
+
+  #----------------- ENVIRONMENT devtools --------------------
+#  devtools:
+#    livereload:
+#      enabled: false
+#      port: 35729
+#    restart:
+#      enabled: true
+#      exclude: META-INF/maven/**,META-INF/resources/**,resources/**,static/**,public/**,templates/**,**/*Test.class,**/*Tests.class,git.properties
+#      poll-interval: 500
+#      quiet-period: 400
+
+#============================== SPRING =================================
+
+
+#============================== LOGGING ====================================
+
+logging:
+  path: /data/project/test/nanji-park/logs
+  level:
+    root: INFO
+    com:
+      benma: DEBUG
+    org:
+      hibernate:
+        SQL: INFO
+
+#============================== LOGGING ====================================
+
+
