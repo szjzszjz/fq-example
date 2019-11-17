@@ -16,8 +16,8 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <springfox-swagger2.version>2.7.0</springfox-swagger2.version>
-        <springfox-swagger-ui.version>2.7.0</springfox-swagger-ui.version>
+<!--        <springfox-swagger2.version>2.7.0</springfox-swagger2.version>-->
+<!--        <springfox-swagger-ui.version>2.7.0</springfox-swagger-ui.version>-->
     </properties>
 
     <dependencies>
@@ -26,17 +26,19 @@
             <artifactId>fq-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+
+        <!-- 因为FQ中已经引入了swagger 所已项目中可以不用在引用-->
         <!-- swagger2 -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>${springfox-swagger2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>${springfox-swagger2.version}</version>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>io.springfox</groupId>-->
+        <!--            <artifactId>springfox-swagger2</artifactId>-->
+        <!--            <version>${springfox-swagger2.version}</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>io.springfox</groupId>-->
+        <!--            <artifactId>springfox-swagger-ui</artifactId>-->
+        <!--            <version>${springfox-swagger2.version}</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

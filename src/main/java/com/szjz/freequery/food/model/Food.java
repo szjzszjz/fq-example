@@ -2,6 +2,7 @@ package com.szjz.freequery.food.model;
 import com.szjz.freequery.base.BaseEntity;
 import com.szjz.freequery.food.enums.FoodSizeEnum;
 import com.szjz.freequery.food.enums.FoodStatusEnum;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
@@ -25,6 +26,7 @@ public class  Food extends BaseEntity implements Serializable {
     private String name;
 
     /** 排序/序号 */
+    @ApiModelProperty(hidden = true)
     private Integer sort;
 
     /** 编号 */

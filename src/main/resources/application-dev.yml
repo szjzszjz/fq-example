@@ -1,6 +1,6 @@
 #============================ SERVER ============================
 server:
-  port: 8888
+  port: 8882
   servlet:
     session:
       cookie:

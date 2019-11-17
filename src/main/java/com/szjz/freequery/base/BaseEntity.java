@@ -4,6 +4,8 @@
  */
 package com.szjz.freequery.base;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,11 +26,13 @@ public class BaseEntity implements Serializable {
     private Date gmtCreate;
 
     /** 修改时间 */
+    @ApiModelProperty(hidden = true)
     @Column(nullable = false)
     private Date gmtModified;
 
     /** 是否已删除 */
     @Column(nullable = false)
+    @JsonIgnore
     private Boolean isDeleted;
 
 }
